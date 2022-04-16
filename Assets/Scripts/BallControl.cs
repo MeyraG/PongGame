@@ -7,7 +7,7 @@ public class BallControl : MonoBehaviour
     Rigidbody rb;
 
     [SerializeField]
-    float speed = 30f;
+    float speed = 20f;
     
     void Start()
     {
@@ -28,8 +28,7 @@ public class BallControl : MonoBehaviour
 
             Vector3 dir = new Vector3(1, 0, z).normalized;
 
-            GetComponent<Rigidbody>().velocity = dir * speed;
-            Debug.Log("ilk if blogu calisti");
+            GetComponent<Rigidbody>().velocity = dir * speed;       
         }
 
         if (collision.gameObject.name == "PlayerAI")
@@ -39,7 +38,6 @@ public class BallControl : MonoBehaviour
             Vector3 dir = new Vector3(-1, 0, z).normalized;
 
             GetComponent<Rigidbody>().velocity = dir * speed;
-            Debug.Log("ikinci if blogu calisti");
         }
     }
 
