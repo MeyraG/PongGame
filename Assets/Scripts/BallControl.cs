@@ -12,7 +12,7 @@ public class BallControl : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        InitialForce();
+        ResetPosition();
     }
 
     float hitFactor(Vector3 ballpos, Vector3 paddlePos, float paddleHeight) 
@@ -45,5 +45,12 @@ public class BallControl : MonoBehaviour
     {
         Vector3 direction = new Vector3(Random.Range(3, 5), 0, 0).normalized;
         rb.AddForce(direction * speed, ForceMode.Impulse);
+    }
+
+    public void ResetPosition()
+    {
+        rb.position = new Vector3(0, 1, -2);
+        rb.velocity = new Vector3(0, 1, -2);
+        InitialForce();
     }
 }

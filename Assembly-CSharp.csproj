@@ -8,7 +8,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{521AF60E-AA6A-9BD2-72DE-E0159F646B88}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -55,10 +56,13 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\PlayerControl.cs" />
     <Compile Include="Assets\Scripts\Extras.cs" />
-    <Compile Include="Assets\Scripts\ScreenSize.cs" />
-    <Compile Include="Assets\Scripts\PaddleAI.cs" />
-    <Compile Include="Assets\Scripts\BallControl.cs" />
     <Compile Include="Assets\Scripts\MenuControl.cs" />
+    <Compile Include="Assets\Scripts\ScreenSize.cs" />
+    <Compile Include="Assets\Scripts\PlayerAI.cs" />
+    <Compile Include="Assets\Scripts\BallControl.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\ScoreControl.cs" />
+    <Compile Include="Class1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Fonts\FONTS\LICENSE.txt" />
