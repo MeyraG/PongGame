@@ -44,13 +44,13 @@ public class BallControl : MonoBehaviour
     public void InitialForce()
     {
         Vector3 direction = new Vector3(Random.Range(3, 5), 0, 0).normalized;
-        rb.AddForce(direction * speed, ForceMode.Impulse);
+        rb.AddForce(direction * 80, ForceMode.Force);
     }
 
     public void ResetPosition()
     {
         rb.position = new Vector3(0, 1, -2);
         rb.velocity = new Vector3(0, 1, -2);
-        InitialForce();
+        Invoke("InitialForce",0.2f);
     }
 }
