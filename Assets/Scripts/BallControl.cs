@@ -50,7 +50,7 @@ public class BallControl : MonoBehaviour
     public void ResetPosition()
     {
         rb.position = new Vector3(0, 1, -2);
-        rb.velocity = new Vector3(0, 1, -2);
-        Invoke("InitialForce",0.2f);
+        rb.velocity = new Vector3(0, 0, 0);
+        Invoke("InitialForce",0.4f);
     }
 }
