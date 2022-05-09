@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     int playerScore;
     int playerAIScore;
     public BallControl ball;
+    
    
     public void PlayerScore()
     {

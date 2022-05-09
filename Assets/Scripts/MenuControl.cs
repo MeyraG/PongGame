@@ -13,5 +13,6 @@ public class MenuControl : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+        SceneManager.LoadScene("GameOver");
     }
 }
