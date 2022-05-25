@@ -55,7 +55,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ScoreControl.cs" />
     <Compile Include="Assets\Scripts\PlayerControl.cs" />
-    <Compile Include="Assets\Scripts\Extras.cs" />
+    <Compile Include="Assets\Scripts\ExtrasUser.cs" />
     <Compile Include="Assets\Scripts\MenuControl.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\ScreenSize.cs" />
@@ -64,6 +64,8 @@
     <Compile Include="Assets\Scripts\BallControl.cs" />
     <Compile Include="Assets\Scripts\BallSpeed.cs" />
     <Compile Include="Assets\Scripts\ExtensionButtons.cs" />
+    <Compile Include="Assets\Scripts\ExtraFeatures.cs" />
+    <Compile Include="Assets\Scripts\ExtrasAI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

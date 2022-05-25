@@ -8,11 +8,11 @@ public class ExtensionButtons : MonoBehaviour
     [SerializeField]
     private Button rotateButton;
 
-    private Extras extras;
+    private ExtrasUser extras;
 
     private void Awake()
     {
-        extras = FindObjectOfType<Extras>();
+        extras = FindObjectOfType<ExtrasUser>();
     }
 
 
