@@ -4,22 +4,29 @@ using UnityEngine;
 
 public class Extras : MonoBehaviour
 {
-//    public bool isPlayer1;
-//    public bool hasAlreadyDown; public bool hasAlreadyRotated; public bool hasAlreadyReversed;
-//    public float duration; 
-//    public float startTime;
+    private bool hasAlreadyDown; private bool hasAlreadyRotated; private bool hasAlreadyReversed;
+    public float duration;
 
-   
+    private float rotateCounter;
+
 
     void Start()
     {
-      
+        rotateCounter = duration;
     }
 
     
     void Update()
     {
-        
+        if (hasAlreadyRotated)
+        {
+            rotateCounter -= Time.deltaTime;
+            if(rotateCounter <= 0)
+            {
+                NotRotate();
+                rotateCounter = duration;
+            }
+        }
     }
 
 
@@ -47,18 +54,18 @@ public class Extras : MonoBehaviour
 
     public void Rotate()
     {
-        //if (!hasAlreadyRotated)
-        //{
-        //    startTime = Time.time;
-        //    transform.rotation = Quaternion.Euler(0, 0, 90);
-        //    hasAlreadyRotated = true;
-        //    Debug.Log("Rotate is working!");
-        //}
+        if (!hasAlreadyRotated)
+        {
+            //startTime = Time.time;
+            transform.rotation = Quaternion.Euler(90, 0, 90);
+            hasAlreadyRotated = true;
+            Debug.Log("Rotate is working!");
+        }
     }
     public void NotRotate()
     {
-        //transform.rotation = Quaternion.Euler(0, 0, 0);
-        //hasAlreadyRotated = false;
+        transform.rotation = Quaternion.Euler(90, 0, 0);
+        hasAlreadyRotated = false;
     }
 
     public void Reverse()

@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class BallControl : MonoBehaviour
 {
-    Rigidbody rb;
+    public Rigidbody rb;
+    GameManager gameManager;
 
-    [SerializeField]
-    float speed = 20f;
+    
+    public float speed = 22f;
+
+    [HideInInspector]
+    public float defaultSpeed;
     
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         ResetPosition();
+        defaultSpeed = speed;
     }
 
     float hitFactor(Vector3 ballpos, Vector3 paddlePos, float paddleHeight) 
@@ -31,7 +36,7 @@ public class BallControl : MonoBehaviour
             GetComponent<Rigidbody>().velocity = dir * speed;       
         }
 
-        if (collision.gameObject.name == "PlayerAI")
+        if (collision.gameObject.GetComponent<PlayerAI>())
         {
             float z = hitFactor(transform.position, collision.transform.position, collision.collider.bounds.size.z);
 
@@ -51,6 +56,6 @@ public class BallControl : MonoBehaviour
     {
         rb.position = new Vector3(0, 1, -2);
         rb.velocity = new Vector3(0, 0, 0);
-        Invoke("InitialForce",0.4f);
+        Invoke("InitialForce",0.4f);    
     }
 }

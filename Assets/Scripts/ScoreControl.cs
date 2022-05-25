@@ -11,6 +11,9 @@ public class ScoreControl : MonoBehaviour
         {
             BaseEventData eventData = new BaseEventData(EventSystem.current);
             this.scoreTrigger.Invoke(eventData);
+            ball.speed = ball.defaultSpeed;
         }
+        FindObjectOfType<GameManager>().RoundOver();
+        
     }
 }

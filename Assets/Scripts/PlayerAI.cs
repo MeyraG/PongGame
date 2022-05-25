@@ -39,4 +39,9 @@ public class PlayerAI : MonoBehaviour
             }
         }
     }
+
+    public void ResetPosAI()
+    {
+        transform.position = new Vector3(11, 1, -2);
+    }
 }

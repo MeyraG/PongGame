@@ -59,9 +59,11 @@
     <Compile Include="Assets\Scripts\MenuControl.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\ScreenSize.cs" />
+    <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\PlayerAI.cs" />
     <Compile Include="Assets\Scripts\BallControl.cs" />
-    <Compile Include="Assets\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\BallSpeed.cs" />
+    <Compile Include="Assets\Scripts\ExtensionButtons.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

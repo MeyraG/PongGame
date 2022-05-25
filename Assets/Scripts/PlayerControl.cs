@@ -17,4 +17,9 @@ public class PlayerControl : MonoBehaviour
     {
         rb.velocity = Vector3.forward * Input.GetAxisRaw("Horizontal1") * speed;
     }
+
+    public void ResetPosPlayer()
+    {
+        transform.position = new Vector3(-11, 1, -2);
+    }
 }
